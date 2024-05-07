@@ -1,0 +1,188 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 88vh;
+  /* margin-left: 33%; */
+  margin-top: 40px;
+  border: 1px solid rgba(227, 226, 226, 0.037) !important;
+  box-shadow: 0px 0px 15px rgba(145, 145, 224, 0.432);
+  border-radius: 10px;
+  padding: 5px;
+  width: 300px;
+  justify-content: center;
+  text-align: center;
+  background:linear-gradient(to top, rgb(6, 1, 91),rgb(255, 255, 255));
+}
+.app.rain{
+  background:linear-gradient(to top, rgb(28, 28, 28), rgb(2, 35, 85),rgb(2, 47, 114));
+}
+.app .search-box .search-input{
+  border-radius: 8px;
+  height: 30px;
+  border: 1px solid rgb(224, 221, 221);
+  padding-left: 5px;
+  outline: none;
+  appearance: none;
+  box-shadow: 0px 2px rgb(221, 220, 220);
+}
+
+.app .location-box{
+  width: 100%;
+  margin-top: 10%;
+}
+.app .location-box .location{
+  font-size: 21px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+.app .location-box .date{
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 600;
+  margin-top: 10%;
+  color: rgba(52, 52, 52, 0.674) ;
+}
+.app .weather-box {
+  width: 100%;
+  margin-top: 10%;
+}
+.app .weather-box .temp .temp-value{
+ font-size: 70px;
+ font-family: sans-serif;
+ padding: 15px;
+ background-color: rgba(255, 255, 255, 0.543);
+ box-shadow: 05px 05px 3px rgba(160, 159, 159, 0.176);
+ text-align: center;
+ width: 70%;
+ border-radius: 10px;
+ color: rgba(0, 0, 0, 0.836);
+}
+.app .weather-box .weather-desc{
+  font-size: 33px;
+  font-weight: 600;
+  margin-top: 10%;
+  color: rgb(34, 34, 34);
+  font-family: sans-serif;
+}
+.app .weather-box .weather-description{
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10%;
+  color: rgba(63, 63, 63, 0.721);
+  font-family: sans-serif;
+}
+
+/* code selon le temps */
+.app.clouds{
+  background-image: url("https://media.giphy.com/media/Qrdep630dyOucGsEsB/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.rain{
+  background-image: url("https://media.giphy.com/media/W3AxWb5C3kiXiQ1RaY/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.clear{
+  background-image: url("https://media.giphy.com/media/U5IshBeCxetWSPgC3f/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.snow{
+  background-image: url("https://media.giphy.com/media/h7Y3rfqV9qADYcOJaD/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.drizzle{
+  background-image: url("https://media.giphy.com/media/MDaMURfqSp7H1mQ1Ga/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.thunderstorm{
+  background-image: url("https://media.giphy.com/media/XzvMZODa3rgQN9TDWn/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.storm{
+  background-image: url("https://media.giphy.com/media/gdNti10T5nbcnOkIIg/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.wind{
+  background-image: url("https://media.giphy.com/media/XzvMZODa3rgQN9TDWn/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.sun{
+  background-image: url("https://media.giphy.com/media/U5IshBeCxetWSPgC3f/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.sun-clouds{
+  background-image: url("https://media.giphy.com/media/S86iV2dDZl3lKJgXWC/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.few-clouds{
+  background-image: url("https://media.giphy.com/media/RicBcdnIs9BcIxtbha/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.app.rainbow{
+  background-image: url("https://media.giphy.com/media/kEQYVW7B2sSriqMvp0/giphy.gif");
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
