@@ -80,7 +80,7 @@ function App() {
 
   return (
     <>
-      <div className="container">
+      <div className="">
         <div class="row justify-content-center align-items-center" >
           {/* <center className="me">by Zoddy </center> */}
             <div className={`app justify-content-center ${getVideoBackgroundClass()}`}>
@@ -116,8 +116,10 @@ function App() {
                 </div>
               ) : (
                 <div>
-                  <div className="div">
-                    Nothing to show here
+                  <div className="nothing">
+                    <br /><br /><br />
+                    <img src="https://cdn.dribbble.com/users/760295/screenshots/4433975/media/03494b209a1511a61868ced337b97931.png?resize=400x0" alt="" /><br /><br />
+                    <center>Weather App React-js by zodyy ✨</center>
                   </div>
                 </div>
               ) }

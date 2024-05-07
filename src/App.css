@@ -5,9 +5,10 @@
 }
 
 .app {
-  min-height: 88vh;
+  /* min-height: 88vh; */
+  height: 480px;
   /* margin-left: 33%; */
-  margin-top: 40px;
+  margin-top: 30px;
   border: 1px solid rgba(227, 226, 226, 0.037) !important;
   box-shadow: 0px 0px 15px rgba(145, 145, 224, 0.432);
   border-radius: 10px;
@@ -15,19 +16,21 @@
   width: 300px;
   justify-content: center;
   text-align: center;
-  background:linear-gradient(to top, rgb(6, 1, 91),rgb(255, 255, 255));
+  /* background:linear-gradient(to top, rgb(6, 1, 91),rgb(255, 255, 255)); */
+  background-color: white;
 }
 .app.rain{
   background:linear-gradient(to top, rgb(28, 28, 28), rgb(2, 35, 85),rgb(2, 47, 114));
 }
 .app .search-box .search-input{
   border-radius: 8px;
-  height: 30px;
+  height: 35px;
   border: 1px solid rgb(224, 221, 221);
   padding-left: 5px;
   outline: none;
+  /* font-size: 12px; */
   appearance: none;
-  box-shadow: 0px 2px rgb(221, 220, 220);
+  box-shadow: 0px 2px 4px rgb(209, 210, 222);
 }
 
 .app .location-box{
@@ -184,5 +187,9 @@
   background-size: contain;
   padding-top: 10px;
   padding-bottom: 40px;
+}
+
+.app .nothing img{
+  width: 200px;
 }
 
