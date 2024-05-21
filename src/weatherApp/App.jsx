@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import './App.css'
+
+// import '../css/App.css';
+import Layout from '../Layouts/App';
 
 const api = {
   key: "65eedf923fe1f2ac5048b9329865046b",
@@ -80,54 +82,57 @@ function App() {
 
   return (
     <>
-      <div className="">
-        <div class="row justify-content-center align-items-center" >
-          {/* <center className="me">by Zoddy </center> */}
-            <div className={`app justify-content-center ${getVideoBackgroundClass()}`}>
-              <div className="search-box">
-                <input 
-                    type="text" 
-                    className='search-input'
-                    placeholder='Search here ...'
-                    onChange={e=>setQuery(e.target.value)}
-                    value={query}
-                    // onKeyPress={search}
-                    onKeyDown={search}
-                />
-              </div>
-              { (typeof weather.main != "undefined") ? (
-                <div className="">
-                  <div className="location-box">
-                      <div className="location">{weather.name}, {weather.sys.country}</div>
-                      <div className="date">{dateBuilder(new Date())}</div>
-                  </div>
-                  <div className="weather-box">
-                    <div className="temp">
-                      <center><div className="temp-value">{Math.round(weather.main.temp)}°C</div></center>
+      <Layout>
+
+        <div className="">
+          <div class="row justify-content-center align-items-center" >
+            {/* <center className="me">by Zoddy </center> */}
+              <div className={`app justify-content-center ${getVideoBackgroundClass()}`}>
+                <div className="search-box">
+                  <input 
+                      type="text" 
+                      className='search-input'
+                      placeholder='Search here ...'
+                      onChange={e=>setQuery(e.target.value)}
+                      value={query}
+                      onKeyDown={search}
+                  />
+                </div>
+                { (typeof weather.main != "undefined") ? (
+                  <div className="">
+                    <div className="location-box">
+                        <div className="location">{weather.name}, {weather.sys.country}</div>
+                        <div className="date">{dateBuilder(new Date())}</div>
                     </div>
-                    <div className="weather">
-                      <div className="weather-icon">
-                        {/* <i className="fas fa-sun"></i> */}
+                    <div className="weather-box">
+                      <div className="temp">
+                        <center><div className="temp-value">{Math.round(weather.main.temp)}°C</div></center>
                       </div>
-                      <div className="weather-desc">{weather.weather[0].main}</div>
-                      <div className="weather-description">{weather.weather[0].description}</div>
+                      <div className="weather">
+                        <div className="weather-icon">
+                          {/* <i className="fas fa-sun"></i> */}
+                        </div>
+                        <div className="weather-desc">{weather.weather[0].main}</div>
+                        <div className="weather-description">{weather.weather[0].description}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ) : (
-                <div>
-                  <div className="nothing">
-                    <br /><br /><br />
-                    <img src="https://cdn.dribbble.com/users/760295/screenshots/4433975/media/03494b209a1511a61868ced337b97931.png?resize=400x0" alt="" /><br /><br />
-                    <center>Weather App React-js by zodyy ✨</center>
+                ) : (
+                  <div>
+                    <div className="nothing">
+                      <br /><br /><br />
+                      <img src="https://cdn.dribbble.com/users/760295/screenshots/4433975/media/03494b209a1511a61868ced337b97931.png?resize=400x0" alt="" /><br /><br />
+                      <center>Weather App React-js by zodyy ✨</center>
+                    </div>
                   </div>
-                </div>
-              ) }
-              
-            </div>
-           
+                ) }
+                
+              </div>
+            
+          </div>
         </div>
-      </div>
+
+      </Layout>
     </>
   )
 }
