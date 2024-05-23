@@ -1,7 +1,6 @@
 import { useState } from 'react'
+import React from 'react';
 
-// import '../css/App.css';
-import Layout from '../Layouts/App';
 
 const api = {
   key: "65eedf923fe1f2ac5048b9329865046b",
@@ -82,8 +81,6 @@ function App() {
 
   return (
     <>
-      <Layout>
-
         <div className="">
           <div class="row justify-content-center align-items-center" >
             {/* <center className="me">by Zoddy </center> */}
@@ -131,8 +128,6 @@ function App() {
             
           </div>
         </div>
-
-      </Layout>
     </>
   )
 }

@@ -193,3 +193,35 @@
   width: 200px;
 }
 
+
+/*----------------     Nav bar   ------------------*/
+.navigationBar {
+  box-shadow: 0px 07px 6px gainsboro;
+}
+.navigationBar .logo{
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+/*----------------   end  Nav bar   ------------------*/
+
+/*----------------     Welcom page   ------------------*/
+
+.welcomPage {
+  text-align: center;
+}
+.welcomPage h1{
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+/*----------------   end   Welcom page   ------------------*/
+
+
+/*----------------     footer page   ------------------*/
+
+footer {
+  text-align: center;
+}
+
+/*----------------   end   footer page   ------------------*/

@@ -1,58 +1,66 @@
-import React from 'react';
-import appLogo from '../assets/img/zodyy.png'
+import React, { useEffect, useRef } from 'react';
+import { useNavigate, Outlet, NavLink } from 'react-router-dom';
+import appLogo from '../assets/img/zodyy.png';
 
-const Layout = ({ children }) => {
+
+const App = () => {
+  const navigate = useNavigate(); // Hook pour la navigation
+  const weatherLinkRef = useRef(null); // Référence pour le lien Weather
+  // Vérifier si le chemin actuel est la racine ("/") et déclencher un clic sur le lien Weather
+  useEffect(() => {
+    if (window.location.pathname === '/') {
+      weatherLinkRef.current.click(); // Déclencher un clic sur le lien Weather
+    }
+  }, [navigate]);  // Dépendance vide pour exécuter une seule fois
+  
+
+  
   return (
-    <div className="container">
+    <div className="container-fluid">
       <header>
-        {/* Header */}
         <nav className="navigationBar navbar navbar-expand-lg navbar-light loginPage" aria-label="Tenth navbar example">
-            <div className="container-fluid">
-            <a className="" aria-current="page" href="">
-              <img className="logoImm" src="{{ assets(img/zodyy.png) }}" alt="Logo"/>
-            </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon" ></span>
-                </button>
-                <div className="collapse before navbar-collapse justify-content-md-center" id="navbarsExample08">   
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="App.jsx">Weather App</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" aria-current="page" href="">To-Do List App</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link " aria-current="page" href="../calculatorApp/calculator.jsx">Simple Calculator</a>
-                        </li>
-                        <li className="">
-                            <a className="" aria-current="page" href=""><img className="logoImm" src='{appLogo}' alt="" /></a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link " aria-current="page" href="">Movie Database App</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link " aria-current="page" href="">Recipe App</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" aria-current="page" href="">Other</a>
-                        </li>
-                    </ul>
-                   
-                </div>
+          <div className="container-fluid">
+            <NavLink to="/weather" className="" aria-current="page" >
+              <img className="logo" src={appLogo} alt="Logo" />
+            </NavLink>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse before navbar-collapse justify-content-md-center" id="navbarsExample08">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <NavLink ref={weatherLinkRef} className="nav-link " aria-current="page" to="/weather">Weather App</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/todolist">To-Do List App</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/calculator">Simple Calculator</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/movie">Movie Database App</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/recipe">Recipe App</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/other">Other</NavLink>
+                </li>
+              </ul>
             </div>
+          </div>
         </nav>
       </header>
       <main>
-        {/* Contenu principal (peut être différent pour chaque page) */}
-        {children}
+        <Outlet/>
       </main>
       <footer>
-        {/* Footer */}
         <p>© 2024 Mon Application. Tous droits réservés.</p>
       </footer>
     </div>
   );
+ 
+
 };
 
-export default Layout;
+export default App;
