@@ -225,3 +225,87 @@ footer {
 }
 
 /*----------------   end   footer page   ------------------*/
+.todo-list {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.todo-list  .input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-list .input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.todo-list .input-container button {
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-list .input-container button:hover {
+  background: #0056b3;
+}
+
+.todo-list .todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #8d8a8a;
+}
+
+.todo-list .todo-item span {
+  cursor: pointer;
+}
+
+.todo-list .todo-item button {
+  /* background: transparent;
+  border: none;
+  color: #ff0000; */
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.todo-list .todo-item button:hover {
+  text-decoration: underline;
+}
+
+/* src/css/App.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+  text-align: center;
+}
+.modal-overlay .modal-content input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000f42;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  outline: none;
+}
